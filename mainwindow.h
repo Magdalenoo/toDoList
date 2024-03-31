@@ -16,21 +16,25 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
     void readFile();
+
     void writeFile();
 
 private slots:
+
     void on_addButton_clicked();
 
     void on_deleteButton_clicked();
 
     void on_deleteAllButton_clicked();
 
-private: 
-    //Smart pointers
+private:
+
+    //Smart pointer
     std::unique_ptr<Ui::MainWindow> ui;
 
     QString path;
